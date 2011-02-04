@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40CC610312FABD2D009925F6 /* libjson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6508D75512DCF2B70017FCE6 /* libjson.a */; };
 		40D7FA5F12F9C99900CD8F76 /* BSCouchDBChange.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 652141C012E32FC100AF1837 /* BSCouchDBChange.h */; };
 		40D7FA6012F9C9A600CD8F76 /* BSCouchDBResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6558468512DC9204005A81CA /* BSCouchDBResponse.h */; };
 		40D7FA6112F9C9A600CD8F76 /* BSCouchDBReplicationResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65AEB96E12DE0B890074F47A /* BSCouchDBReplicationResponse.h */; };
@@ -347,6 +348,7 @@
 				65992D0212EC8FB800D96EB1 /* CFNetwork.framework in Frameworks */,
 				65992D0512EC8FB800D96EB1 /* MobileCoreServices.framework in Frameworks */,
 				65992D0712EC8FB800D96EB1 /* libz.dylib in Frameworks */,
+				40CC610312FABD2D009925F6 /* libjson.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1006,6 +1008,10 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/vendor/json-framework/build/$(BUILD_STYLE)-$(PLATFORM_NAME)\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/vendor/json-framework/build/Debug-iphonesimulator\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				PRODUCT_NAME = BSCouchObjC;
@@ -1021,6 +1027,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/vendor/json-framework/build/$(BUILD_STYLE)-$(PLATFORM_NAME)\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/vendor/json-framework/build/Debug-iphonesimulator\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				PRODUCT_NAME = BSCouchObjC;

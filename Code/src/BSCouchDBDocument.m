@@ -14,6 +14,7 @@
 @synthesize dictionary;
 @synthesize database;
 
+@dynamic url;
 @dynamic _id;
 @dynamic _rev;
 
@@ -35,6 +36,22 @@
 	[database release];// self.database = nil; 
 	[super dealloc];	
 }
+
+
+- (NSURL*)url
+{
+	return [NSURL URLWithString:[percentEscape(self._id) stringByAppendingString:@"/"] relativeToURL:self.database.url];
+
+}
+
+#pragma mark -
+#pragma mark Attachment methods
+
+- (NSURL*)attachmentUrl:(NSString*)attachmentID
+{
+	return [NSURL URLWithString:percentEscape(attachmentID) relativeToURL:self.url];
+}
+
 
 #pragma mark -
 #pragma mark Dictionary methods

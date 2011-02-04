@@ -20,9 +20,14 @@
 
 @property (nonatomic, readonly) NSString *_id;
 @property (nonatomic, readonly) NSString *_rev;
+@property (nonatomic, readonly) NSURL *url;
 
 + (BSCouchDBDocument *)documentWithDictionary:(NSDictionary *)otherDictionary database:(BSCouchDBDatabase *)aDatabase;
 - (id)initWithDictionary:(NSDictionary *)otherDictionary database:(BSCouchDBDatabase *)aDatabase;
+
+#pragma mark Attachment methods
+
+- (NSURL*)attachmentUrl:(NSString*)attachmentID;
 
 #pragma mark Dictionary methods
 
